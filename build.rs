@@ -10,7 +10,7 @@ fn main() {
     cc::Build::new()
         .file("src/wrapper.cpp")
         .cpp(true)
-        .flag_if_supported("-std=c++14")
+        .flag_if_supported("-std=c++17")
         .define("OPENDHT_VERSION", opendht.version.as_str())
         .define("OPENDHT_MAJOR_VERSION", opendht_version[0])
         .compile("dht-wrapper");
